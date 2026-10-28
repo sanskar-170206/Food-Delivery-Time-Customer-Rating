@@ -187,7 +187,7 @@ with tabs[3]:
         st.write(f"Pearson p-value: **{pearson_p:.6g}**")
         st.write(f"Spearman p-value: **{spearman_p:.6g}**")
         st.markdown("**Interpretation guide:** values near +1 indicate positive association, values near −1 indicate negative association, and values near 0 indicate little linear/monotonic association. Correlation does not establish causation.")
-        fig = px.strip(corr_data, x="rating_numeric", y="delivery_time", points="all",
+        fig = px.strip(corr_data, x="rating_numeric", y="delivery_time",
                        labels={"rating_numeric": "Customer rating", "delivery_time": "Delivery time (minutes)"},
                        title="Delivery time for each recorded customer rating")
         st.plotly_chart(fig, use_container_width=True)
